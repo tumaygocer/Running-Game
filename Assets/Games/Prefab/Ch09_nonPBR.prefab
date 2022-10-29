@@ -1661,6 +1661,7 @@ GameObject:
   - component: {fileID: 3554364154965498689}
   - component: {fileID: 6138538817758282967}
   - component: {fileID: 6138538817758282960}
+  - component: {fileID: 3553782801904542062}
   m_Layer: 0
   m_Name: Ch09
   m_TagString: Untagged
@@ -1831,6 +1832,19 @@ CapsuleCollider:
   m_Height: 1.7297465
   m_Direction: 1
   m_Center: {x: 0, y: 0.81233746, z: 0.1180512}
+--- !u!114 &3553782801904542062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7019897528278871605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a205247ab5fec234ab13aab8355cad00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnManager: {fileID: 0}
 --- !u!1 &7172340015203657772
 GameObject:
   m_ObjectHideFlags: 0
