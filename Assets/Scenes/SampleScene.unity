@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 246112572}
   - component: {fileID: 246112570}
+  - component: {fileID: 246112573}
   m_Layer: 0
   m_Name: SpawnManager
   m_TagString: Untagged
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90efa04e734195244a26cc23ef67337d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offset: 60
+  offset: 25.6
   roads:
   - {fileID: 3644219229395178258}
   - {fileID: 681318604}
@@ -173,6 +174,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &246112573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246112569}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20f64f6681da1894aba02b40efc8dcf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &462607023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3644219229469508030, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
@@ -185,6 +198,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1438006775}
     m_Modifications:
+    - target: {fileID: 1655205275, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
+      propertyPath: m_TagString
+      value: Spawn
+      objectReference: {fileID: 0}
     - target: {fileID: 3644219229469508030, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -346,6 +363,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1438006775}
     m_Modifications:
+    - target: {fileID: 1655205275, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
+      propertyPath: m_TagString
+      value: Spawn
+      objectReference: {fileID: 0}
     - target: {fileID: 3644219229469508030, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -547,6 +568,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1438006775}
     m_Modifications:
+    - target: {fileID: 1655205275, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
+      propertyPath: m_TagString
+      value: Spawn
+      objectReference: {fileID: 0}
     - target: {fileID: 3644219229469508030, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -681,10 +706,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 543450652312394379, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+    - target: {fileID: 3553782801904542062, guid: fe1175648672ad448a12c537303a41ab, type: 3}
       propertyPath: spawnManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 246112573}
     - target: {fileID: 5961290316782805822, guid: fe1175648672ad448a12c537303a41ab, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -699,7 +724,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5961290316782805822, guid: fe1175648672ad448a12c537303a41ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.65
+      value: 19.49
       objectReference: {fileID: 0}
     - target: {fileID: 5961290316782805822, guid: fe1175648672ad448a12c537303a41ab, type: 3}
       propertyPath: m_LocalRotation.w

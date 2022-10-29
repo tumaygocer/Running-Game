@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RoadSpawner : MonoBehaviour
 {
-    [SerializeField] private float offset = 60f;
+    [SerializeField] private float offset = 25.6f;
 
     public List<GameObject> roads = new List<GameObject>();
     
