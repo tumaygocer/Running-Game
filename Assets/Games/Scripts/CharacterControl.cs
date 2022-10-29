@@ -15,11 +15,18 @@ public class CharacterControl : MonoBehaviour
    
     void Update()
     {
-        
+       
     }
 
     private void OnTriggerEnter(Collider other)
     {
+        StartCoroutine(WaitTime());
+    }
+
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(3f);
         spawnManager.SpawnTriggerEntered();
+
     }
 }
