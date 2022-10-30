@@ -1661,7 +1661,7 @@ GameObject:
   - component: {fileID: 3554364154965498689}
   - component: {fileID: 7206606817197594251}
   - component: {fileID: 265352435830924661}
-  - component: {fileID: 1231176803483161760}
+  - component: {fileID: 7693428236716125590}
   m_Layer: 0
   m_Name: Ch09
   m_TagString: Collection
@@ -1833,7 +1833,7 @@ CapsuleCollider:
   m_Height: 1.7297465
   m_Direction: 1
   m_Center: {x: 0, y: 0.81233746, z: 0.1180512}
---- !u!114 &1231176803483161760
+--- !u!114 &7693428236716125590
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1845,8 +1845,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a205247ab5fec234ab13aab8355cad00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offSet: 0.1
   stack: {fileID: 1311080984089316, guid: af9d0903bfdf9c749ac85725af5631ec, type: 3}
-  location: {fileID: 0}
+  location: {fileID: 8240415064853710818}
+  anim: {fileID: 313823854133606724}
 --- !u!1 &7172340015203657772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1934,7 +1936,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7368235073591220719}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.66, z: 0.06}
+  m_LocalPosition: {x: 0, y: 0.98, z: -0.35}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
