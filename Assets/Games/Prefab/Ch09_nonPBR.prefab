@@ -1659,12 +1659,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4722406791933347633}
   - component: {fileID: 3554364154965498689}
-  - component: {fileID: 6138538817758282967}
-  - component: {fileID: 6138538817758282960}
-  - component: {fileID: 3553782801904542062}
+  - component: {fileID: 7206606817197594251}
+  - component: {fileID: 265352435830924661}
+  - component: {fileID: 1231176803483161760}
   m_Layer: 0
   m_Name: Ch09
-  m_TagString: Untagged
+  m_TagString: Collection
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1677,7 +1677,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7019897528278871605}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1803,7 +1803,7 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.00005054474, y: 0.09036967, z: 0.12523633}
     m_Extent: {x: 0.751698, y: 0.87624216, z: 0.3826881}
   m_DirtyAABB: 0
---- !u!54 &6138538817758282967
+--- !u!54 &7206606817197594251
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1819,7 +1819,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!136 &6138538817758282960
+--- !u!136 &265352435830924661
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1833,7 +1833,7 @@ CapsuleCollider:
   m_Height: 1.7297465
   m_Direction: 1
   m_Center: {x: 0, y: 0.81233746, z: 0.1180512}
---- !u!114 &3553782801904542062
+--- !u!114 &1231176803483161760
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1845,10 +1845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a205247ab5fec234ab13aab8355cad00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSet: 0.4
-  collection: []
-  instant: {fileID: 0}
-  collectionObject: {fileID: 0}
+  stack: {fileID: 1311080984089316, guid: af9d0903bfdf9c749ac85725af5631ec, type: 3}
+  location: {fileID: 0}
 --- !u!1 &7172340015203657772
 GameObject:
   m_ObjectHideFlags: 0
