@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spawn
+  - Coin
+  - Heart
+  - Enemy
+  - Stone
+  - Collection
   layers:
   - Default
   - TransparentFX

@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 7}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 85
+  controlID: 19
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 24
+  controlID: 105
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -275,7 +275,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 25
+  controlID: 106
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -408,21 +408,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Games/Prefab
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Games/Prefab
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\gtuma\Unity\Games\Running-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 2c5c0000
-    m_LastClickedID: 23596
+    m_SelectedIDs: 505c0000
+    m_LastClickedID: 23632
     m_ExpandedIDs: 000000002c5c00002e5c0000305c0000325c0000345c0000365c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -538,7 +538,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 151
+    m_CachedPref: 210
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -579,23 +579,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 32fbffff
+      m_SelectedIDs: 38f9ffff
+      m_LastClickedID: -1736
+      m_ExpandedIDs: 78faffff12fbffff32fbffff065a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: SpawnTrigger
+        m_OriginalName: SpawnTrigger
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -1730
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -830,9 +830,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.07008274, y: 1.6365262, z: -1.8739789}
+    m_Target: {x: 0.03324988, y: 1.8724107, z: -1.7642083}
     speed: 2
-    m_Value: {x: 0.07008274, y: 1.6365262, z: -1.8739789}
+    m_Value: {x: 0.03324988, y: 1.8724107, z: -1.7642083}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -879,9 +879,9 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.10869824, y: -0.003261447, z: 0.0003889706, w: -0.99410737}
+    m_Target: {x: -0.16663046, y: 0.00861165, z: -0.0013952217, w: -0.98603475}
     speed: 2
-    m_Value: {x: -0.10869343, y: -0.004752424, z: 0.00055199664, w: -0.9940638}
+    m_Value: {x: -0.16661933, y: 0.0100901555, z: -0.0016450783, w: -0.98596835}
   m_Size:
     m_Target: 1.0163087
     speed: 2
@@ -969,7 +969,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 1
+    m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -982,7 +982,7 @@ MonoBehaviour:
       y: 21
       width: 258
       height: 450.8
-    m_Scale: {x: 0.19923985, y: 0.19923986}
+    m_Scale: {x: 0.19037162, y: 0.19037162}
     m_Translation: {x: 129, y: 225.4}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -990,12 +990,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -647.4608
-      y: -1131.2997
-      width: 1294.9216
-      height: 2262.5994
+      x: -677.622
+      y: -1184
+      width: 1355.244
+      height: 2368
     m_MinimalGUI: 1
-  m_defaultScale: 0.19923986
+  m_defaultScale: 0.19037162
   m_LastWindowPixelSize: {x: 322.5, y: 589.75}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
