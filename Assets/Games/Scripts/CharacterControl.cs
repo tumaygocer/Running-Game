@@ -5,7 +5,7 @@ using System.Linq;
 
 public class CharacterControl : MonoBehaviour
 {
-    [SerializeField] private float offSet = 0.2f;
+    [SerializeField] private float offSet = 0.4f;
     private List<GameObject> collection = new List<GameObject>();
     public GameObject stack;
     public Transform location;
@@ -32,6 +32,11 @@ public class CharacterControl : MonoBehaviour
         if (other.gameObject.CompareTag("Stone"))
         {           
             anim.SetTrigger("Takýlma");           
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            anim.SetTrigger("Death");
         }
     }
 
