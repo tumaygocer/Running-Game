@@ -16,17 +16,25 @@ public class CharacterControl : MonoBehaviour
         anim = GetComponentInParent<Animator>();
     }
 
+    private void Update()
+    {
+        if (collection != null && collection.Count > 0)
+        {
+            collection = collection.OrderBy(r => r.transform.position.y).ToList();
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Collection"))
         {
-           
-            //Destroy(other.gameObject);
-            other.transform.parent = location.parent;
-            other.gameObject.transform.position = location.transform.position;
-            collection.Add(other.gameObject);
-            float newy = collection[0].transform.position.y + offSet;
-            other.gameObject.transform.position = new Vector3(location.transform.position.x, newy, location.transform.position.z);
+            GameObject _g = other.gameObject;
+            _g.transform.parent = location;
+            _g.gameObject.transform.localPosition = Vector3.zero;           
+            float newy = offSet * collection.Count;
+            collection.Add(_g);
+            collection[collection.Count -1].transform.localPosition = new Vector3(0, newy, 0);
+            
         }
 
         if (other.gameObject.CompareTag("Stone"))
