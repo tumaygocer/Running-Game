@@ -9,6 +9,7 @@ public class CharacterControl : MonoBehaviour
     private List<GameObject> collection = new List<GameObject>();
     public GameObject stack;
     public Transform location;
+    public Transform fallingObjects;
 
     public Animator anim;
     private void Start()
@@ -38,7 +39,12 @@ public class CharacterControl : MonoBehaviour
         }
 
         if (other.gameObject.CompareTag("Stone"))
-        {           
+        {
+            GameObject _removecollection = collection[collection.Count - 1];
+            _removecollection.GetComponent<Rigidbody>().useGravity = true;
+            _removecollection.GetComponent<BoxCollider>().isTrigger = false;
+            collection.Remove(_removecollection);
+            _removecollection.transform.parent = fallingObjects;                                                        
             anim.SetTrigger("Takýlma");           
         }
 
