@@ -1,40 +1,66 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class TouchControl : MonoBehaviour
 {
     public Animator anim;
+    private Camera _camera;
     void Start()
     {
         anim = GetComponent<Animator>();
-    }
-   
-    void Update()
-    {
-        TouchMove();
+        _camera = Camera.main;
     }
 
-    void TouchMove()
+    private void OnEnable()
     {
-        if (Input.touchCount > 0)
+        FingerGestures.OnFingerMoveBegin += OnFingerMoveBegin;
+        FingerGestures.OnFingerMove += OnFingerMove;
+        FingerGestures.OnFingerMoveEnd += OnFingerMoveEnd;
+        FingerGestures.OnDragMove += OnFingerDrag;
+    }
+
+    private void OnFingerDrag(Vector2 fingerPos, Vector2 delta)
+    {
+       
+    }
+
+    private void OnDisable()
+    {
+        FingerGestures.OnFingerMoveBegin -= OnFingerMoveBegin;
+        FingerGestures.OnFingerMove -= OnFingerMove;
+        FingerGestures.OnFingerMoveEnd -= OnFingerMoveEnd;
+    }
+
+    private void OnFingerMoveBegin(int fingerIndex, Vector2 fingerPos)
+    {
+
+    }
+
+    private void OnFingerMove(int fingerIndex, Vector2 fingerPos)
+    {
+        if (fingerPos.x > 20f)
         {
-            Touch finger = Input.GetTouch(0);
+            transform.DOMoveX(1, 1f);
+        }
 
-            if (finger.deltaPosition.x >= 30f)
-            {
-                transform.position = new Vector3(1, transform.position.y, transform.position.z);
-            }
-
-            if (finger.deltaPosition.x <= -30f)
-            {
-                transform.position = new Vector3(-1, transform.position.y, transform.position.z);
-            }
-
-            if (finger.deltaPosition.y >=30f)
-            {
-                anim.SetTrigger("Jump");
-            }
+        if (fingerPos.x < -20f)
+        {
+            transform.DOMoveX(-1, 1f);
         }
     }
+
+    private void OnFingerMoveEnd(int fingerIndex, Vector2 fingerPos)
+    {
+       
+    }
+
+    void Update()
+    {
+        
+    }
+
+    
 }
