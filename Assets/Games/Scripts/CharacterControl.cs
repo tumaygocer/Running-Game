@@ -13,6 +13,7 @@ public class CharacterControl : MonoBehaviour
     public GameObject House;
     public Transform location;
     public Transform fallingObjects;
+    public Transform houseBuild;
     public Animator anim;
     public TextMeshProUGUI _object;
     private int _objectcount;
@@ -64,7 +65,12 @@ public class CharacterControl : MonoBehaviour
             anim.SetTrigger("Dance");
             if (collection.Count >= 3)
             {
-                House.GetComponentInChildren<MeshRenderer>().enabled = true;
+                houseBuild.transform.localPosition = Vector3.zero;
+                Instantiate(House, houseBuild);             
+                foreach (var item in collection)
+                {
+                    item.GetComponent<MeshRenderer>().enabled = false;                    
+                }
             }
         }
     }   
