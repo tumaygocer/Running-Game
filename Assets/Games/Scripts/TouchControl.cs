@@ -7,11 +7,11 @@ using DG.Tweening;
 public class TouchControl : MonoBehaviour
 {
     public Animator anim;
-    private Camera _camera;
+
     void Start()
     {
         anim = GetComponent<Animator>();
-        _camera = Camera.main;
+
     }
 
     private void OnEnable()

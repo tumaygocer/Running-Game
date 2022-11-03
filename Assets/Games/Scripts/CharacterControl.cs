@@ -47,10 +47,21 @@ public class CharacterControl : MonoBehaviour
             _removecollection.transform.parent = fallingObjects;                                                        
             anim.SetTrigger("Takýlma");           
         }
+    }
 
-        if (other.gameObject.CompareTag("Enemy"))
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.gameObject.CompareTag("Enemy"))
         {
             anim.SetTrigger("Death");
+            foreach (var item in collection)
+            {
+                item.GetComponent<Rigidbody>().useGravity = true;
+                item.GetComponent<BoxCollider>().isTrigger = false;
+                item.transform.parent = fallingObjects;
+                collection.Remove(item);
+            }
         }
     }
 
