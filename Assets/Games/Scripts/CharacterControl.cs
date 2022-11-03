@@ -47,6 +47,11 @@ public class CharacterControl : MonoBehaviour
             _removecollection.transform.parent = fallingObjects;                                                        
             anim.SetTrigger("Takýlma");           
         }
+
+        if (other.gameObject.CompareTag("Finish"))
+        {
+            anim.SetTrigger("Dance");
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
