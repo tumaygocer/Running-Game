@@ -31,7 +31,7 @@ public class TouchControl : MonoBehaviour
     {
         FingerGestures.OnFingerMoveBegin -= OnFingerMoveBegin;
         FingerGestures.OnFingerMove -= OnFingerMove;
-        FingerGestures.OnFingerMoveEnd -= OnFingerMoveEnd;
+        FingerGestures.OnFingerMoveEnd -= OnFingerMoveEnd;        
     }
 
     private void OnFingerMoveBegin(int fingerIndex, Vector2 fingerPos)

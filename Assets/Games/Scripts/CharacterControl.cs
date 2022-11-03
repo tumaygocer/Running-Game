@@ -17,6 +17,7 @@ public class CharacterControl : MonoBehaviour
     public Animator anim;
     public TextMeshProUGUI _object;
     private int _objectcount;
+    public GameObject _character;
 
     private void Start()
     {
@@ -63,14 +64,15 @@ public class CharacterControl : MonoBehaviour
         if (other.gameObject.CompareTag("Finish"))
         {          
             anim.SetTrigger("Dance");
+            foreach (var item in collection)
+            {
+                item.GetComponent<MeshRenderer>().enabled = false;
+            }
             if (collection.Count >= 3)
             {
                 houseBuild.transform.localPosition = Vector3.zero;
-                Instantiate(House, houseBuild);             
-                foreach (var item in collection)
-                {
-                    item.GetComponent<MeshRenderer>().enabled = false;                    
-                }
+                Instantiate(House, houseBuild);
+                _character.transform.DORotate(new Vector3(transform.rotation.x, 180, transform.rotation.z), 1f);               
             }
         }
     }   

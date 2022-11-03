@@ -2033,12 +2033,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e863d8a08e474307802eaf34f998943, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pitch: 10
+  Pitch: 0
   Yaw: 0
   Roll: 0
   PaddingLeft: 0
@@ -2048,7 +2048,7 @@ MonoBehaviour:
   MoveSmoothTime: 0.19
   _targets:
   - {fileID: 1594643845}
-  - {fileID: 0}
+  - {fileID: 1416885731}
 --- !u!1001 &1090410239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3624,9 +3624,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1961698680677990881, guid: 989a291ea124161438582b495a25e033, type: 3}
     - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
       propertyPath: _object
       value: 
       objectReference: {fileID: 2124442604}
+    - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: _character
+      value: 
+      objectReference: {fileID: 1594643845}
     - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
       propertyPath: houseBuild
       value: 
