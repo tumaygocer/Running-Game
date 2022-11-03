@@ -8,12 +8,15 @@ public class CharacterControl : MonoBehaviour
     [SerializeField] private float offSet = 0.4f;
     private List<GameObject> collection = new List<GameObject>();
     public GameObject stack;
+    public GameObject House;
     public Transform location;
     public Transform fallingObjects;
+    bool build;
 
     public Animator anim;
     private void Start()
     {
+        build = false;
         anim = GetComponentInParent<Animator>();
     }
 
@@ -50,9 +53,14 @@ public class CharacterControl : MonoBehaviour
 
         if (other.gameObject.CompareTag("Finish"))
         {
+            build = true;
             anim.SetTrigger("Dance");
+            if (collection.Count >= 5)
+            {
+                House.GetComponentInChildren<MeshRenderer>().enabled = true;
+            }
         }
-    }
+    }   
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -64,8 +72,8 @@ public class CharacterControl : MonoBehaviour
             {
                 item.GetComponent<Rigidbody>().useGravity = true;
                 item.GetComponent<BoxCollider>().isTrigger = false;
-                item.transform.parent = fallingObjects;
-                collection.Remove(item);
+                //item.transform.parent = fallingObjects;
+                //collection.Remove(item);
             }
         }
     }
