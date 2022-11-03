@@ -1528,6 +1528,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 1
   m_Children:
+  - {fileID: 8240415064853710818}
   - {fileID: 4722406791933347633}
   - {fileID: 4114259617093304898}
   m_Father: {fileID: 0}
@@ -1565,7 +1566,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb89121a79f64444ca745be2fbeaa6e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 0}
+  anim: {fileID: 313823854133606724}
 --- !u!1 &6746765613617068153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,7 +1630,7 @@ Transform:
   - {fileID: 3295701637559193233}
   - {fileID: 6766254028265140908}
   m_Father: {fileID: 5961290316782805822}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6875817841100060723
 GameObject:
@@ -1695,10 +1696,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 8240415064853710818}
+  m_Children: []
   m_Father: {fileID: 5961290316782805822}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!137 &3554364154965498689
 SkinnedMeshRenderer:
@@ -1844,10 +1844,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.46673426
+  m_Radius: 0.33534786
   m_Height: 1.7297465
   m_Direction: 1
-  m_Center: {x: 0, y: 0.81233746, z: 0.1180512}
+  m_Center: {x: -0.0014975667, y: 0.8123374, z: 0.105662644}
 --- !u!114 &7693428236716125590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,6 +1862,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offSet: 0.4
   stack: {fileID: 1311080984089316, guid: af9d0903bfdf9c749ac85725af5631ec, type: 3}
+  House: {fileID: 0}
   location: {fileID: 8240415064853710818}
   fallingObjects: {fileID: 0}
   anim: {fileID: 313823854133606724}
@@ -1877,6 +1878,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e632c737a3325a542b347bb5235096b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _text: {fileID: 0}
 --- !u!1 &7172340015203657772
 GameObject:
   m_ObjectHideFlags: 0
@@ -1968,7 +1970,7 @@ Transform:
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4722406791933347633}
+  m_Father: {fileID: 5961290316782805822}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7500291881581505750

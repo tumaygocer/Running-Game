@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+
 public class CoinsControl : MonoBehaviour
 {
     public TextMeshProUGUI _text;
@@ -15,7 +16,7 @@ public class CoinsControl : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Coin"))
-        {
+        {           
             scor += 1;
             _text.text = "Scor:  " + scor;
             Destroy(other.gameObject);

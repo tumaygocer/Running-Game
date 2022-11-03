@@ -19,7 +19,7 @@ public class TouchControl : MonoBehaviour
         FingerGestures.OnFingerMoveBegin += OnFingerMoveBegin;
         FingerGestures.OnFingerMove += OnFingerMove;
         FingerGestures.OnFingerMoveEnd += OnFingerMoveEnd;
-        FingerGestures.OnDragMove += OnFingerDrag;
+        FingerGestures.OnDragMove += OnFingerDrag;        
     }
 
     private void OnFingerDrag(Vector2 fingerPos, Vector2 delta)
