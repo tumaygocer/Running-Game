@@ -55,7 +55,7 @@ public class CharacterControl : MonoBehaviour
         {
             build = true;
             anim.SetTrigger("Dance");
-            if (collection.Count >= 5)
+            if (collection.Count >= 1)
             {
                 House.GetComponentInChildren<MeshRenderer>().enabled = true;
             }
