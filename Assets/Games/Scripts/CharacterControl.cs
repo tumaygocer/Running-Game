@@ -62,7 +62,7 @@ public class CharacterControl : MonoBehaviour
         if (other.gameObject.CompareTag("Finish"))
         {          
             anim.SetTrigger("Dance");
-            if (collection.Count >= 1)
+            if (collection.Count >= 3)
             {
                 House.GetComponentInChildren<MeshRenderer>().enabled = true;
             }
