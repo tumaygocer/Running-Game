@@ -10,18 +10,29 @@ public class TouchControl : MonoBehaviour
     public GameObject playerMesh;
     float playerx;
     public float speed;
-    public bool canMove = true;
+    public bool canMove = false;
     bool canMovex = true;
 
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
 
+    }
+
+    public void Button()
+    {
+        canMove = true;
+        anim.SetBool("Run", true);
     }
 
     private void OnEnable()
     {       
         FingerGestures.OnFingerDragMove += OnFingerDragMove;
+    }
+
+    private void OnDisable()
+    {
+        FingerGestures.OnFingerDragMove -= OnFingerDragMove;
     }
 
     private void OnFingerDragMove(int fingerIndex, Vector2 fingerPos, Vector2 delta)
@@ -41,14 +52,6 @@ public class TouchControl : MonoBehaviour
 
         }
     }
-
-   
-
-    private void OnDisable()
-    {
-        FingerGestures.OnFingerDragMove -= OnFingerDragMove;
-    }
-  
 
     void Update()
     {
