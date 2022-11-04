@@ -2048,7 +2048,7 @@ MonoBehaviour:
   MoveSmoothTime: 0.19
   _targets:
   - {fileID: 1594643845}
-  - {fileID: 1416885731}
+  - {fileID: 1961698680677990881, guid: 989a291ea124161438582b495a25e033, type: 3}
 --- !u!1001 &1090410239
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2634,7 +2634,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 543450652312394380}
   playerMesh: {fileID: 1594643845}
-  speed: 5
+  speed: 3
   canMove: 1
 --- !u!4 &1675069899
 Transform:
@@ -3673,6 +3673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch09_nonPBR
       objectReference: {fileID: 0}
+    - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 963194227}
     - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
       propertyPath: _object
       value: 

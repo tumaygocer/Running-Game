@@ -18,6 +18,7 @@ public class CharacterControl : MonoBehaviour
     public TextMeshProUGUI _object;
     private int _objectcount;
     public GameObject _character;
+    public Camera _camera;
 
     private void Start()
     {
@@ -65,6 +66,10 @@ public class CharacterControl : MonoBehaviour
         {
             GetComponentInParent<TouchControl>().canMove = false;
             anim.SetTrigger("Dance");
+            _camera.GetComponent<CameraMultiTarget>().Pitch = 20;
+            _camera.GetComponent<CameraMultiTarget>().PaddingLeft = 2;
+            _camera.GetComponent<CameraMultiTarget>().PaddingRight = 2;
+            _camera.GetComponent<CameraControl>().enabled = false;
             foreach (var item in collection)
             {
                 item.GetComponent<MeshRenderer>().enabled = false;
