@@ -1508,7 +1508,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5961290316782805822}
   - component: {fileID: 313823854133606724}
-  - component: {fileID: 8063815875309488556}
   m_Layer: 0
   m_Name: Ch09_nonPBR
   m_TagString: Player
@@ -1547,26 +1546,13 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 0017c2838b006f04eae83aad3939e0bb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8063815875309488556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6480980416678394244}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bb89121a79f64444ca745be2fbeaa6e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 313823854133606724}
 --- !u!1 &6746765613617068153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1832,7 +1818,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &265352435830924661
 CapsuleCollider:
@@ -1860,12 +1846,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a205247ab5fec234ab13aab8355cad00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  offSet: 0.4
+  offSet: 0.3
   stack: {fileID: 1311080984089316, guid: af9d0903bfdf9c749ac85725af5631ec, type: 3}
-  House: {fileID: 0}
+  House: {fileID: 1961698680677990881, guid: 989a291ea124161438582b495a25e033, type: 3}
   location: {fileID: 8240415064853710818}
   fallingObjects: {fileID: 0}
+  houseBuild: {fileID: 0}
   anim: {fileID: 313823854133606724}
+  _object: {fileID: 0}
+  _character: {fileID: 6480980416678394244}
 --- !u!114 &2031125846
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ using TMPro;
 
 public class CharacterControl : MonoBehaviour
 {
-    [SerializeField] private float offSet = 0.4f;
+    [SerializeField] private float offSet = 0.3f;
     private List<GameObject> collection = new List<GameObject>();
     public GameObject stack;
     public GameObject House;
@@ -62,7 +62,8 @@ public class CharacterControl : MonoBehaviour
         _object.text = "Object: " + _objectcount;
 
         if (other.gameObject.CompareTag("Finish"))
-        {          
+        {
+            GetComponentInParent<TouchControl>().canMove = false;
             anim.SetTrigger("Dance");
             foreach (var item in collection)
             {

@@ -7,6 +7,11 @@ using DG.Tweening;
 public class TouchControl : MonoBehaviour
 {
     public Animator anim;
+    public GameObject playerMesh;
+    float playerx;
+    public float speed;
+    public bool canMove = true;
+    bool canMovex = true;
 
     void Start()
     {
@@ -15,52 +20,53 @@ public class TouchControl : MonoBehaviour
     }
 
     private void OnEnable()
-    {
-        FingerGestures.OnFingerMoveBegin += OnFingerMoveBegin;
-        FingerGestures.OnFingerMove += OnFingerMove;
-        FingerGestures.OnFingerMoveEnd += OnFingerMoveEnd;
-        FingerGestures.OnDragMove += OnFingerDrag;        
+    {       
+        FingerGestures.OnFingerDragMove += OnFingerDragMove;
     }
 
-    private void OnFingerDrag(Vector2 fingerPos, Vector2 delta)
+    private void OnFingerDragMove(int fingerIndex, Vector2 fingerPos, Vector2 delta)
     {
-       
+        if (delta.x > 0f && canMovex)
+        {
+            canMovex = false;
+            playerx = Mathf.Clamp(playerx + 1, -1, 1);
+            playerMesh.transform.DOLocalMove(new Vector3(playerx, 0, 0), 0.5f).OnComplete(() => canMovex = true);
+        }
+
+        if (delta.x < 0f && canMovex)
+        {
+            canMovex = false;
+            playerx = Mathf.Clamp(playerx - 1, -1, 1);
+            playerMesh.transform.DOLocalMove(new Vector3(playerx, 0, 0), 0.5f).OnComplete(() => canMovex = true);
+
+        }
     }
+
+   
 
     private void OnDisable()
     {
-        FingerGestures.OnFingerMoveBegin -= OnFingerMoveBegin;
-        FingerGestures.OnFingerMove -= OnFingerMove;
-        FingerGestures.OnFingerMoveEnd -= OnFingerMoveEnd;        
+        FingerGestures.OnFingerDragMove -= OnFingerDragMove;
     }
-
-    private void OnFingerMoveBegin(int fingerIndex, Vector2 fingerPos)
-    {
-
-    }
-
-    private void OnFingerMove(int fingerIndex, Vector2 fingerPos)
-    {
-        if (fingerPos.x > 20f)
-        {
-            transform.DOMoveX(1, 1f);
-        }
-
-        if (fingerPos.x < -20f)
-        {
-            transform.DOMoveX(-1, 1f);
-        }
-    }
-
-    private void OnFingerMoveEnd(int fingerIndex, Vector2 fingerPos)
-    {
-       
-    }
+  
 
     void Update()
     {
         
+        if (canMove == true)
+        {
+            transform.position += new Vector3(0, 0, 1) * Time.deltaTime * speed;
+        }
+    }
+    Vector3 GetWorldPos(Vector2 screenPos)
+    {
+        Ray ray = Camera.main.ScreenPointToRay(screenPos);
+
+        //we solve for intersection with y = 0 plane
+        float t = -ray.origin.z / ray.direction.z;
+
+        return ray.GetPoint(t);
     }
 
-    
+
 }
