@@ -17,4 +17,6 @@ public class CameraControl : MonoBehaviour
         this.transform.position = Vector3.Lerp(this.transform.position, target.transform.position + distance, Time.deltaTime);
     }
 
+    
+
 }
