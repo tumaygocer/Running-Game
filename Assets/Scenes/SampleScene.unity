@@ -1249,6 +1249,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Way (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6498672138274895256, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140332423039774876, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
 --- !u!4 &681318603 stripped
@@ -2041,8 +2049,8 @@ Camera:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.57924527, g: 0.74287206, b: 1, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -2123,7 +2131,7 @@ MonoBehaviour:
   PaddingRight: 0
   PaddingUp: 3
   PaddingDown: 0
-  MoveSmoothTime: 0.1
+  MoveSmoothTime: 0.19
   _targets:
   - {fileID: 1594643845}
   - {fileID: 1961698680677990881, guid: 989a291ea124161438582b495a25e033, type: 3}
@@ -3959,6 +3967,14 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.807
       objectReference: {fileID: 0}
+    - target: {fileID: 6498672138274895256, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140332423039774876, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92201cf9048d0ec4e86cb19fd50f182d, type: 3}
 --- !u!1001 &6138538819141007796
@@ -3968,10 +3984,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1675069899}
     m_Modifications:
-    - target: {fileID: 2031125846, guid: fe1175648672ad448a12c537303a41ab, type: 3}
-      propertyPath: _text
+    - target: {fileID: 4827335550412817808, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: _camera
       value: 
-      objectReference: {fileID: 331231330}
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 4827335550412817808, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: _object
+      value: 
+      objectReference: {fileID: 2124442604}
+    - target: {fileID: 4827335550412817808, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: houseBuild
+      value: 
+      objectReference: {fileID: 1416885732}
+    - target: {fileID: 4827335550412817808, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: fallingObjects
+      value: 
+      objectReference: {fileID: 27178951}
     - target: {fileID: 5961290316782805822, guid: fe1175648672ad448a12c537303a41ab, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -4020,22 +4048,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch09_nonPBR
       objectReference: {fileID: 0}
-    - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
-      propertyPath: _camera
+    - target: {fileID: 7811245146218350844, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: m_Center.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570005679758520505, guid: fe1175648672ad448a12c537303a41ab, type: 3}
+      propertyPath: _text
       value: 
-      objectReference: {fileID: 963194227}
-    - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
-      propertyPath: _object
-      value: 
-      objectReference: {fileID: 2124442604}
-    - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
-      propertyPath: houseBuild
-      value: 
-      objectReference: {fileID: 1416885732}
-    - target: {fileID: 7693428236716125590, guid: fe1175648672ad448a12c537303a41ab, type: 3}
-      propertyPath: fallingObjects
-      value: 
-      objectReference: {fileID: 27178951}
+      objectReference: {fileID: 331231330}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe1175648672ad448a12c537303a41ab, type: 3}
 --- !u!1001 &7657838280987851597
